@@ -1,0 +1,13 @@
+-- table_1_1
+
+ALTER TABLE IF EXISTS "table_1_1" ADD
+  CONSTRAINT "table_1_1_ref_1_fk" FOREIGN KEY
+  ("reference_to_1") REFERENCES "table_1_2" ("id")
+  ON DELETE NO ACTION ON UPDATE NO ACTION
+  DEFERRABLE;
+
+ALTER TABLE IF EXISTS "table_1_1" ADD
+  CONSTRAINT "table_1_1_ref_2_fk" FOREIGN KEY
+  ("reference_to_2") REFERENCES "table_2_1" ("id")
+  ON DELETE NO ACTION ON UPDATE NO ACTION;
+
